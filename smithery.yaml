@@ -1,0 +1,33 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - deepseekApiKey
+      - grokApiKey
+      - googleApiKey
+      - anthropicApiKey
+      - openaiApiKey
+    properties:
+      deepseekApiKey:
+        type: string
+        description: API key for DeepSeek.
+      grokApiKey:
+        type: string
+        description: API key for Grok.
+      googleApiKey:
+        type: string
+        description: API key for Google.
+      anthropicApiKey:
+        type: string
+        description: API key for Anthropic.
+      openaiApiKey:
+        type: string
+        description: API key for OpenAI.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({command: 'python', args: ['app.py'], env: {DEEPSEEK_API_KEY: config.deepseekApiKey, GROK_API_KEY: config.grokApiKey, GOOGLE_API_KEY: config.googleApiKey, ANTHROPIC_API_KEY: config.anthropicApiKey, OPENAI_API_KEY: config.openaiApiKey}})
