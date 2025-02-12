@@ -1,5 +1,7 @@
 # J.A.R.V.I.S. - AI Code Assistant
 
+[![smithery badge](https://smithery.ai/badge/@essenecrucix-netizen/jarvis)](https://smithery.ai/server/@essenecrucix-netizen/jarvis)
+
 J.A.R.V.I.S. is an intelligent coding assistant that leverages multiple state-of-the-art language models to help you with code generation, modifications, and technical discussions.
 
 ## Features
@@ -73,6 +75,14 @@ J.A.R.V.I.S. is an intelligent coding assistant that leverages multiple state-of
   - Marked and Unified.js for Markdown
 
 ## Installation
+
+### Installing via Smithery
+
+To install J.A.R.V.I.S. for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@essenecrucix-netizen/jarvis):
+
+```bash
+npx -y @smithery/cli install @essenecrucix-netizen/jarvis --client claude
+```
 
 1. Clone the repository
 2. Install dependencies:
